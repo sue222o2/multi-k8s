@@ -10,7 +10,6 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker build -t sue222/react-test -f ./client/Dockerfile.dev ./client
 
-
 deploy:
   provider: script
   script: bash ./deploy.sh
